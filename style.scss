@@ -1,0 +1,41 @@
+body {
+	background-color: #222222;
+}
+
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 95vh;
+	margin: 15px;
+	border: 2px solid #3d3d3d;
+	cursor: pointer;
+}
+
+.visual {
+}
+
+@keyframes round {
+	0% {
+		transform: scale(0.3);
+		opacity: 0.1;
+	}
+	50% {
+		transform: scale(3);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(0.01);
+		opacity: 0;
+	}
+}
+.visual {
+	height: 10vw;
+	width: 10vw;
+	/*   transform: translate(-40vw, -40vw); */
+	transform-origin: center;
+	animation: round 3000ms ease-in-out;
+	border-radius: 50%;
+	filter: blur(6px);
+	/*   background-image: -webkit-radial-gradient(center, ellipse cover, rgba(21, 144, 2, 0.9) 0%, rgba(50, 8, 126, 0.5) 30%, rgba(225, 158, 244, 0.4) 66%, rgba(44, 0, 167, 0.2) 67%, rgba(255, 130, 100, 0.1) 98%, rgba(0,0,0,0) 100%); */
+}
